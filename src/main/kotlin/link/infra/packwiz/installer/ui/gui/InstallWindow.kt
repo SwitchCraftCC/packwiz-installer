@@ -1,6 +1,7 @@
 package link.infra.packwiz.installer.ui.gui
 
 import link.infra.packwiz.installer.ui.data.InstallProgress
+import link.infra.packwiz.installer.ui.gui.GUIHandler.Companion.setScIcons
 import java.awt.BorderLayout
 import java.awt.Component
 import java.awt.GridBagConstraints
@@ -22,6 +23,7 @@ class InstallWindow(private val handler: GUIHandler) : JFrame() {
 		isResizable = false
 		defaultCloseOperation = EXIT_ON_CLOSE
 		setLocationRelativeTo(null)
+		setScIcons()
 
 		// Progress bar and loading text
 		add(JPanel().apply {

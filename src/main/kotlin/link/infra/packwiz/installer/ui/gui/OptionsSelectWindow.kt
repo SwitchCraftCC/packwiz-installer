@@ -1,13 +1,13 @@
 package link.infra.packwiz.installer.ui.gui
 
 import link.infra.packwiz.installer.ui.data.IOptionDetails
+import link.infra.packwiz.installer.ui.gui.GUIHandler.Companion.setScIcons
 import java.awt.BorderLayout
 import java.awt.FlowLayout
 import java.awt.event.ActionEvent
 import java.awt.event.ActionListener
 import java.awt.event.WindowAdapter
 import java.awt.event.WindowEvent
-import java.util.*
 import java.util.concurrent.CompletableFuture
 import javax.swing.*
 import javax.swing.border.EmptyBorder
@@ -86,6 +86,7 @@ class OptionsSelectWindow internal constructor(optList: List<IOptionDetails>, fu
 
 		setBounds(100, 100, 450, 300)
 		setLocationRelativeTo(parentWindow)
+		setScIcons()
 
 		contentPane.apply {
 			layout = BorderLayout()

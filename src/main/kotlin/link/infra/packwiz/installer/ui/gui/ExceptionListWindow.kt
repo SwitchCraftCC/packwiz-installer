@@ -2,6 +2,7 @@ package link.infra.packwiz.installer.ui.gui
 
 import link.infra.packwiz.installer.ui.IUserInterface
 import link.infra.packwiz.installer.ui.data.ExceptionDetails
+import link.infra.packwiz.installer.ui.gui.GUIHandler.Companion.setScIcons
 import java.awt.BorderLayout
 import java.awt.Desktop
 import java.awt.event.WindowAdapter
@@ -30,6 +31,7 @@ class ExceptionListWindow(eList: List<ExceptionDetails>, future: CompletableFutu
 	init {
 		setBounds(100, 100, 540, 340)
 		setLocationRelativeTo(parentWindow)
+		setScIcons()
 
 		contentPane.apply {
 			layout = BorderLayout()

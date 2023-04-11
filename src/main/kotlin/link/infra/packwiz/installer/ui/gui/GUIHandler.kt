@@ -7,9 +7,11 @@ import link.infra.packwiz.installer.ui.data.IOptionDetails
 import link.infra.packwiz.installer.ui.data.InstallProgress
 import link.infra.packwiz.installer.util.Log
 import java.awt.EventQueue
-import java.util.Timer
+import java.awt.Window
+import java.util.*
 import java.util.concurrent.CompletableFuture
 import java.util.concurrent.CountDownLatch
+import javax.imageio.ImageIO
 import javax.swing.JDialog
 import javax.swing.JOptionPane
 import javax.swing.UIManager
@@ -246,6 +248,19 @@ class GUIHandler : IUserInterface {
 		closeTimer?.cancel()
 		EventQueue.invokeLater {
 			frmPackwizlauncher.hideOk()
+		}
+	}
+
+	companion object {
+		private val windowIcons by lazy {
+			listOf(
+				ImageIO.read(this::class.java.getResourceAsStream("/window-icon-16.png")),
+				ImageIO.read(this::class.java.getResourceAsStream("/window-icon-32.png")),
+			)
+		}
+
+		fun Window.setScIcons() {
+			iconImages = windowIcons
 		}
 	}
 }
