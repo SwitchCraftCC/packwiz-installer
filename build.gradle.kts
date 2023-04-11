@@ -135,7 +135,7 @@ tasks.build {
 }
 
 githubRelease {
-	owner("comp500")
+	owner("SwitchCraftCC")
 	repo("packwiz-installer")
 	tagName("${project.version}")
 	releaseName("Release ${project.version}")
